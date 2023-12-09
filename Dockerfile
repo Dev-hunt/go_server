@@ -5,7 +5,7 @@ FROM golang:1.17-alpine AS build
 WORKDIR /app
 
 # Copy the Go server source code into the container
-COPY /workspaces/go_server .
+COPY . .
 
 # Build the Go server binary
 RUN go build -o go-server .
