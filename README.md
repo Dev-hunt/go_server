@@ -41,4 +41,7 @@ step 11: now open render, login then make a webservice. pull your latest version
 
 
 
-Challenges Faces :: 1) Sorting Algo with concurrent, 2) Go version with go mod file 3) docker image not works 4)  render the web app 5) domain configuration 
+Challenges Faces :: 1) Sorting Algo with concurrent, 2) Go version with go mod file 3) docker image not works 4)  render the web app 5) domain configuration ![Screenshot 2023-12-10 215328](https://github.com/Dev-hunt/go_server/assets/79158208/845c7c7e-4fef-4617-9d49-1c26d8c47a22)
+![Screenshot 2023-12-10 215358](https://github.com/Dev-hunt/go_server/assets/79158208/35fc02c8-4338-47f2-8423-5c0b4f64f784)
+![Screenshot 2023-12-10 214223](https://github.com/Dev-hunt/go_server/assets/79158208/386b5b4d-46db-4039-a844-0c8a7f2f6dbc)
+
