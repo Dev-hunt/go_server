@@ -41,27 +41,12 @@ func sendJSONResponse(w http.ResponseWriter, sortedArrays [][]int, duration time
 	enc.SetIndent("", "  ")
 	_ = enc.Encode(response)
 }
-// func sendJSONResponse(w http.ResponseWriter, data interface{}, duration time.Duration) {
-// 	response := struct {
-// 		Data     interface{} `json:"data"`
-// 		Duration string      `json:"duration"`
-// 	}{
-// 		Data:     data,
-// 		Duration: duration.String(),
-// 	}
-
-// 	w.Header().Set("Content-Type", "application/json")
-// 	w.WriteHeader(http.StatusOK)
-
-// 	enc := json.NewEncoder(w)
-// 	enc.SetIndent("", "  ")
-// 	_ = enc.Encode(response)
-// }
 func main() {
-	// Create a new mux to handle routes
+
 	mux := http.NewServeMux()
-	mux.HandleFunc("/",mainpageHandler)
+	
 	// Define the handlers for the endpoints
+	mux.HandleFunc("/",mainpageHandler)
 	mux.HandleFunc("/process-single", processSingleHandler)
 	mux.HandleFunc("/process-concurrent", processConcurrentHandler)
 
@@ -109,10 +94,12 @@ func main() {
 		logger.Fatalf("Error starting server: %v\n", err)
 	}
 }
+
 func mainpageHandler(w http.ResponseWriter,r *http.Request){
 	fmt.Fprint(w,"Server is running Successfully")
 	log.Println("Server is running Successfully")
 }
+
 // processSingleHandler handles the /process-single endpoint for sequential processing
 func processSingleHandler(w http.ResponseWriter, r *http.Request) {
 	var payload SortPayload
@@ -204,14 +191,7 @@ func quickSort(arr []int)error {
 	quickSort(arr[left:])
 	return nil
 }
-// process simulates some work by sleeping for a short duration
-func process(name string) {
-	log.Printf("%s processing started...\n", name)
-	time.Sleep(2 * time.Second) // Simulate some work
-	log.Printf("%s processing completed\n", name)
-}
 
-// getPort gets the port from the PORT environment variable or uses the default value (8000)
 func getPort() int {
 	port := 8000
     if envPort, ok := os.LookupEnv("PORT"); ok {
