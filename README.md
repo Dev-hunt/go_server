@@ -35,3 +35,10 @@ step 9: make a repo in docker and push  the image with tag docker push devansh19
 step 10: check that docker image runnig or not by "docker run -p 8000:8000 go-server-image"
 
 step 11: now open render, login then make a webservice. pull your latest version of docker image, then publish it and configure your domain.
+
+
+
+
+
+
+Challenges Faces :: 1) Sorting Algo with concurrent, 2) Go version with go mod file 3) docker image not works 4)  render the web app 5) domain configuration 
